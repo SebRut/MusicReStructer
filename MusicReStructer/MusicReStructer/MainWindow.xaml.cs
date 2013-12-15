@@ -23,6 +23,9 @@ namespace MusicReStructer
         public MainWindow()
         {
             InitializeComponent();
+            //TODO path
+            MusicDirectory dir = new MusicDirectory(@"");
+            dir.StartProcessing();
         }
     }
 }

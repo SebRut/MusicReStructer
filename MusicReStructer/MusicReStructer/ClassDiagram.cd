@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MusicReStructer.MusicDirectory">
+    <Position X="5.5" Y="2.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>MusicDirectory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicReStructer.DirectoryProcessor">
+    <Position X="8.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DirectoryProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicReStructer.FileProcessor">
+    <Position X="6.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAABAAAQAAAAAA=</HashCode>
+      <FileName>FileProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicReStructer.AudioPathSet">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>AudioPathSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MusicReStructer.DirectoryConfiguration">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEEAQAAAAAECBAAAAAAAAAAAAAAAgAAACAAAA=</HashCode>
+      <FileName>DirectoryConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

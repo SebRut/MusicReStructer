@@ -5,6 +5,13 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReStructer", "MusicReStructer\MusicReStructer.csproj", "{79B51829-D1DA-4326-9054-52462D8B2FB7}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "MusicReStructer.Documentation", "MusicReStructer.Documentation\MusicReStructer.Documentation.shfbproj", "{E95E96F6-E53E-41DC-9715-61B2FB91547D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6821982E-A0E4-44CF-B3E6-F2DEDD70ED87}"
+	ProjectSection(SolutionItems) = preProject
+		default.testsettings = default.testsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{79B51829-D1DA-4326-9054-52462D8B2FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79B51829-D1DA-4326-9054-52462D8B2FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79B51829-D1DA-4326-9054-52462D8B2FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E95E96F6-E53E-41DC-9715-61B2FB91547D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E95E96F6-E53E-41DC-9715-61B2FB91547D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E95E96F6-E53E-41DC-9715-61B2FB91547D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E95E96F6-E53E-41DC-9715-61B2FB91547D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
