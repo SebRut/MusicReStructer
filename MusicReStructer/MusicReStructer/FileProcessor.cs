@@ -1,23 +1,34 @@
 ﻿using System.IO;
+using System.Threading;
 using TFile = TagLib.File;
 
 namespace MusicReStructer
 {
+    /// <summary>
+    /// A class for async music file processing
+    /// </summary>
     public class FileProcessor
     {
         private readonly string file;
         private readonly DirectoryConfiguration configuration;
 
+        /// <summary>
+        /// Initiates a new FileProcessor
+        /// </summary>
+        /// <param name="file">the fiel to process</param>
+        /// <param name="configuration">the config to read from</param>
         public FileProcessor(string file, DirectoryConfiguration configuration)
         {
             this.file = file;
             this.configuration = configuration;
         }
 
+        /// <summary>
+        /// Processes the audio file
+        /// </summary>
+        /// <param name="state">the parameters for status response</param>
         public void ProcessFile(object state)
         {
-            //ID3v1 tagSet = new ID3v1();
-            //tagSet.Deserialize(File.OpenRead(file));
 
             TFile tagFile = TFile.Create(file);
 
@@ -26,6 +37,10 @@ namespace MusicReStructer
 
             File.Move(file, pathSet.TrackPath);
 
+            ManualResetEvent[] callBackArray = ((object[])state)[1] as ManualResetEvent[];
+            callBackArray[(int)((object[])state)[0]].Set();
+
+            System.Diagnostics.Debug.WriteLine(file + " finished");
         }
     }
 }

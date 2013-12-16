@@ -5,8 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using Id3Lib;
-using TagLib.NonContainer;
 using File = System.IO.File;
 using TFile = TagLib.File;
 
@@ -31,8 +29,8 @@ namespace MusicReStructer
             get
             {
                 string ret = String.Empty;
-                if (tagFile.Tag.JoinedAlbumArtists != null)ret = Path.Combine(configuration.BaseDirectory,ValidatePath(tagFile.Tag.JoinedAlbumArtists));
-                else if (tagFile.Tag.JoinedPerformers != null)
+                if (tagFile.Tag.JoinedAlbumArtists != "")ret = Path.Combine(configuration.BaseDirectory,ValidatePath(tagFile.Tag.JoinedAlbumArtists));
+                else if (tagFile.Tag.JoinedPerformers != "")
                     ret = Path.Combine(configuration.BaseDirectory, ValidatePath(tagFile.Tag.JoinedPerformers));
                 else ret = Path.Combine(configuration.BaseDirectory, ValidatePath("Unknown"));
                 return ValidatePath(ret);
@@ -52,7 +50,7 @@ namespace MusicReStructer
 
         private string ValidatePath(string path)
         {
-            string regexSearch = new string(Path.GetInvalidPathChars());
+            string regexSearch = string.Format("{0}{1}", new string(Path.GetInvalidPathChars()), '*');
             Regex r = new Regex(string.Format("[{0}]", Regex.Escape(regexSearch)));
             return r.Replace(path, "");
         }
@@ -62,7 +60,7 @@ namespace MusicReStructer
             get
             {
                 string file = String.Empty;
-                if (tagFile.Tag.Title.Length > 0) file = ValidateFile(tagFile.Tag.Title);
+                if (tagFile.Tag.Title != null) file = ValidateFile(tagFile.Tag.Title);
                 else file = "Track ";
 
                 string j = "";
